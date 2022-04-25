@@ -1,0 +1,144 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "a114w6077dicoding.develops.moviecatalog"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField "String", "BASE_URL", "\"https://api.themoviedb.org/3/\""
+        buildConfigField "String", "IMAGE_URL", "\"https://image.tmdb.org/t/p/w500/\""
+        buildConfigField "String", "API_KEY", "\"e4a6489ad4ee7547fa9ec34fc0633960\""
+        buildConfigField('String', 'ENGLISH_US', '"en-US"')
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures{
+        viewBinding true
+    }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
+}
+
+
+ext {
+    //dependencies version
+    appCompatVersion = '1.2.0'
+    coreVersion = '1.3.2'
+    constraintLayoutVersion = '2.0.4'
+    junitVersion = '4.13.2'
+    junitExtversion = '1.1.2'
+    espressoVersion = '3.3.0'
+    androidTestVersion = '1.4.0'
+    androidXTestVersion = '1.2.0'
+    mockitoVersion = '3.6.0'
+    mockitoKotlinVersion = '2.2.0'
+
+    materialVersion = '1.2.1'
+    recyclerViewVersion = '1.2.1'
+    glideVersion = '4.12.0'
+    paletteVersion = '1.0.0'
+    retrofitVersion = '2.9.0'
+    okhttpVersion = '4.9.0'
+    idlingResVersion = '3.3.0'
+
+    archLifecycleVersion = '2.1.0'
+    roomVersion = '2.2.3'
+    roomRuntimeVersion = '2.3.0'
+    pagingVersion = '2.1.1'
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'junit:junit:4.13.2'
+    implementation 'androidx.test:core-ktx:1.4.0'
+    testImplementation 'junit:junit:'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //kotlin
+    implementation "androidx.core:core-ktx:$coreVersion"
+
+    //ui
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerViewVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation "androidx.palette:palette-ktx:$paletteVersion"
+    implementation "androidx.activity:activity-ktx:1.4.0"
+
+    //testing
+    testImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "junit:junit:$junitVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+    androidTestImplementation "androidx.test:runner:$androidTestVersion"
+    androidTestImplementation "androidx.test:rules:$androidTestVersion"
+    androidTestImplementation "androidx.test.ext:junit:$junitExtversion"
+    testImplementation 'org.robolectric:robolectric:4.6.1'
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espressoVersion"
+    implementation 'com.android.support.test.espresso:espresso-idling-resource:3.0.2'
+
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
+    testImplementation "org.mockito:mockito-inline:$mockitoVersion"
+    testImplementation "androidx.arch.core:core-testing:$archLifecycleVersion"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitoKotlinVersion"
+
+    //img
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$okhttpVersion"
+
+    //noinspection GradleDependency
+    implementation "androidx.test.espresso:espresso-idling-resource:$idlingResVersion"
+
+
+    //Room
+    implementation "androidx.room:room-runtime:$roomRuntimeVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+
+    //paging
+    //noinspection KtxExtensionAvailable,GradleDependency
+    implementation "androidx.paging:paging-runtime:$pagingVersion"
+
+
+}

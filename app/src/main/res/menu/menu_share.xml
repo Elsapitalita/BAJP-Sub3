@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/action_favorite"
+        android:icon="@drawable/ic_baseline_favorite"
+        android:title="@string/favorite"
+        android:iconTint="@color/white"
+        android:iconTintMode="src_in"
+        app:showAsAction="ifRoom"
+        tools:targetApi="o" />
+
+    <item
+        android:id="@+id/action_share"
+        android:icon="@drawable/ic_baseline_share"
+        android:title="@string/share"
+        android:iconTint="@color/white"
+        android:iconTintMode="src_in"
+        app:showAsAction="ifRoom"
+        tools:targetApi="o"/>
+
+</menu>

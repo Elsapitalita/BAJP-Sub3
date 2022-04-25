@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconExtension">
+        <ignore path="src/main/res/drawable-v24/logo_movie.png" />
+    </issue>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/poster_a_start_is_born.jpg" />
+        <ignore path="src/main/res/drawable/poster_alita.jpg" />
+        <ignore path="src/main/res/drawable/poster_aquaman.jpg" />
+        <ignore path="src/main/res/drawable/poster_arrow.jpg" />
+        <ignore path="src/main/res/drawable/poster_bohemian.jpg" />
+        <ignore path="src/main/res/drawable/poster_cold_persuit.jpg" />
+        <ignore path="src/main/res/drawable/poster_creed.jpg" />
+        <ignore path="src/main/res/drawable/poster_doom_patrol.jpg" />
+        <ignore path="src/main/res/drawable/poster_dragon_ball.jpg" />
+        <ignore path="src/main/res/drawable/poster_family_guy.jpg" />
+        <ignore path="src/main/res/drawable/poster_flash.jpg" />
+        <ignore path="src/main/res/drawable/poster_gotham.jpg" />
+        <ignore path="src/main/res/drawable/poster_grey_anatomy.jpg" />
+        <ignore path="src/main/res/drawable/poster_how_to_train.jpg" />
+        <ignore path="src/main/res/drawable/poster_infinity_war.jpg" />
+        <ignore path="src/main/res/drawable/poster_naruto_shipudden.jpg" />
+        <ignore path="src/main/res/drawable/poster_ncis.jpg" />
+        <ignore path="src/main/res/drawable/poster_overlord.jpg" />
+        <ignore path="src/main/res/drawable/poster_ralph.jpg" />
+        <ignore path="src/main/res/drawable/poster_riverdale.jpg" />
+        <ignore path="src/main/res/drawable/poster_robin_hood.jpg" />
+        <ignore path="src/main/res/drawable/poster_serenity.jpg" />
+        <ignore path="src/main/res/drawable/poster_the_simpson.jpg" />
+        <ignore path="src/main/res/drawable/poster_the_umbrella.jpg" />
+    </issue>
+</lint>
